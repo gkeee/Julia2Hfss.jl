@@ -10,5 +10,6 @@ write(file, "Set oAnsoftApp = CreateObject(\"AnsoftHfss.HfssScriptInterface\")\n
 write(file, "Set oDesktop = oAnsoftApp.GetAppDesktop()\n")
 write(file, "oDesktop.RestoreWindow\n")
 write(file, "Set oProject = oDesktop.GetActiveProject(\"Course-1\")\n")
-write(file, "oProject.Save \"Course-1"\n")
+write(file, "oProject.Save \n")
+write(file, "oDesktop.CloseProject \n")
 close(file)

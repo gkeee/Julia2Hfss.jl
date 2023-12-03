@@ -1,5 +1,5 @@
 using LaTeXStrings
-file = open("close_active_project.vbs", "w")
+file = open("D:\\other\\JuliaWorks\\Julia2Hfss.jl\\src\\Julia2Hfss_Initial_files\\close_active_project.vbs", "w")
 write(file, "Dim oAnsoftApp\n")
 write(file, "Dim oDesktop\n")
 write(file, "Dim oProject\n")

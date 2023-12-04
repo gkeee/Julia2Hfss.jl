@@ -13,6 +13,8 @@ module close_active_project
         write(file, "Dim oModule\n")
         write(file, "Set oAnsoftApp = CreateObject(\"AnsoftHfss.HfssScriptInterface\")\n")
         write(file, "Set oDesktop = oAnsoftApp.GetAppDesktop()\n")
+        write(file, "Set oProject = oDesktop.SetActiveProject (\"$(ProjectName)\")\n")
+        write(file, "oProject.SaveAs \"$(PackagePath)\\Julia2Hfss.jl\\HfssProjects\\$(ProjectName).aedt\", true, \" \"\n")
         write(file, "oDesktop.CloseProject \"$(ProjectName)\"\n")
         close(file)
     end

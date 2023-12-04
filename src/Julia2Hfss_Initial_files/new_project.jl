@@ -17,7 +17,7 @@ module new_project
         write(file, "Set oDesktop = oAnsoftApp.GetAppDesktop()\n")
         write(file, "oDesktop.RestoreWindow\n")
         write(file, "Set oProject = oDesktop.NewProject\n")
-        write(file, "oProject.SaveAs \"D:\\other\\JuliaWorks\\Julia2Hfss.jl\\HfssProjects\\$(ProjectName).aedt\", true, \"ef_make_path_absolute\"")
+        write(file, "oProject.SaveAs \"$(PackagePath)\\Julia2Hfss.jl\\HfssProjects\\$(ProjectName).aedt\", true, \"ef_make_path_absolute\"\n")
         close(file)
     end
 end

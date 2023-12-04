@@ -4,7 +4,7 @@ module close_active_project
 
     function closeproject(ProjectName::String, PackagePath::String)
     
-        file = open("$(PackagePath)\\JuliaWorks\\Julia2Hfss.jl\\src\\Julia2Hfss_Initial_files\\close_active_project.vbs", "w")
+        file = open("$(PackagePath)\\Julia2Hfss.jl\\src\\Julia2Hfss_Initial_files\\close_active_project.vbs", "w")
         write(file, "Dim oAnsoftApp\n")
         write(file, "Dim oDesktop\n")
         write(file, "Dim oProject\n")

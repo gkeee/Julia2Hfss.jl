@@ -6,4 +6,4 @@ Dim oEditor
 Dim oModule
 Set oAnsoftApp = CreateObject("AnsoftHfss.HfssScriptInterface")
 Set oDesktop = oAnsoftApp.GetAppDesktop()
-oDesktop.CloseProject "Deneme-1"
+oDesktop.CloseProject "Course-1"

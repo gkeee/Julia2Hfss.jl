@@ -1,10 +1,10 @@
 module new_project 
-    export newproj
+    export newproject
     using LaTeXStrings
 
-    function newproj(ProjectName::String)
+    function newproject(ProjectName::String, PackagePath::String)
     
-        file = open("D:\\other\\JuliaWorks\\Julia2Hfss.jl\\src\\Julia2Hfss_Initial_files\\new_project.vbs", "w")
+        file = open("$(PackagePath)\\Julia2Hfss.jl\\src\\Julia2Hfss_Initial_files\\new_project.vbs", "w")
         write(file, "Dim oAnsoftApp\n")
         write(file, "Dim oDesktop\n")
         write(file, "Dim oProject\n")
@@ -17,7 +17,7 @@ module new_project
         write(file, "Set oDesktop = oAnsoftApp.GetAppDesktop()\n")
         write(file, "oDesktop.RestoreWindow\n")
         write(file, "Set oProject = oDesktop.NewProject\n")
-        write(file, "oProject.SaveAs \"D:\\other\\JuliaWorks\\Julia2Hfss.jl\\src\\Julia2Hfss_Initial_files\\$(ProjectName).aedt\", true, \"ef_make_path_absolute\"")
+        write(file, "oProject.SaveAs \"D:\\other\\JuliaWorks\\Julia2Hfss.jl\\HfssProjects\\$(ProjectName).aedt\", true, \"ef_make_path_absolute\"")
         close(file)
     end
 end

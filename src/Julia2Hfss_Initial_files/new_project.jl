@@ -1,8 +1,8 @@
 module new_project 
-    export newproject
+    export newproj
     using LaTeXStrings
 
-    function newproject(ProjectName::String)
+    function newproj(ProjectName::String)
     
         file = open("D:\\other\\JuliaWorks\\Julia2Hfss.jl\\src\\Julia2Hfss_Initial_files\\new_project.vbs", "w")
         write(file, "Dim oAnsoftApp\n")

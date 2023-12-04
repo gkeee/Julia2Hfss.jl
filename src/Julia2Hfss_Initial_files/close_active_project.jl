@@ -1,12 +1,19 @@
-using LaTeXStrings
-file = open("D:\\other\\JuliaWorks\\Julia2Hfss.jl\\src\\Julia2Hfss_Initial_files\\close_active_project.vbs", "w")
-write(file, "Dim oAnsoftApp\n")
-write(file, "Dim oDesktop\n")
-write(file, "Dim oProject\n")
-write(file, "Dim oDesign\n")
-write(file, "Dim oEditor\n")
-write(file, "Dim oModule\n")
-write(file, "Set oAnsoftApp = CreateObject(\"AnsoftHfss.HfssScriptInterface\")\n")
-write(file, "Set oDesktop = oAnsoftApp.GetAppDesktop()\n")
-write(file, "oDesktop.CloseProject \"Deneme-1\"\n")
-close(file)
+module close_active_project 
+    export closeproject
+    using LaTeXStrings
+
+    function closeproject(ProjectName::String)
+    
+        file = open("D:\\other\\JuliaWorks\\Julia2Hfss.jl\\src\\Julia2Hfss_Initial_files\\close_active_project.vbs", "w")
+        write(file, "Dim oAnsoftApp\n")
+        write(file, "Dim oDesktop\n")
+        write(file, "Dim oProject\n")
+        write(file, "Dim oDesign\n")
+        write(file, "Dim oEditor\n")
+        write(file, "Dim oModule\n")
+        write(file, "Set oAnsoftApp = CreateObject(\"AnsoftHfss.HfssScriptInterface\")\n")
+        write(file, "Set oDesktop = oAnsoftApp.GetAppDesktop()\n")
+        write(file, "oDesktop.CloseProject \"$(ProjectName)\"\n")
+        close(file)
+    end
+end

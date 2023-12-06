@@ -12,4 +12,7 @@ module Julia2Hfss
     include("Julia2Hfss_Initial_files/create_rectangle.jl")
     using .create_rectangle
 
+    include("Julia2Hfss_Initial_files/create_spline.jl")
+    using .create_spline
+
 end

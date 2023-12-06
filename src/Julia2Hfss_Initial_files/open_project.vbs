@@ -9,4 +9,4 @@ Dim omachine
 Set oAnsoftApp = CreateObject("AnsoftHfss.HfssScriptInterface")
 Set oDesktop = oAnsoftApp.GetAppDesktop()
 oDesktop.RestoreWindow
-oDesktop.OpenProject  "D:\other\JuliaWorks\Julia2Hfss.jl\HfssProjects\merttamer.aedt"
+oDesktop.OpenProject  "D:\other\JuliaWorks\Julia2Hfss.jl\HfssProjects\merttamer2.aedt"

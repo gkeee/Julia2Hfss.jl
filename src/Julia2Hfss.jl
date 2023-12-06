@@ -9,4 +9,7 @@ module Julia2Hfss
     include("Julia2Hfss_Initial_files/open_project.jl")
     using .open_project
 
+    include("Julia2Hfss_Initial_files/create_rectangle.jl")
+    using .create_rectangle
+
 end

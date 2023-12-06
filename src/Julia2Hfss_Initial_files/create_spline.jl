@@ -1,3 +1,11 @@
+#=
+Parameters:
+1-Project Name already opened.
+2-Package Path --> Location of .vbs file.
+3-Spline Name: Name of Line which will be drawn.
+4-Vector X: X points in a vector.
+5-Vector Y: Y points in a vector.
+=#
 module create_spline 
     export Cspline
     using LaTeXStrings  

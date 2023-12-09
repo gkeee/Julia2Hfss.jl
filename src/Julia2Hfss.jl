@@ -15,4 +15,10 @@ module Julia2Hfss
     include("Julia2Hfss_Initial_files/create_spline.jl")
     using .create_spline
 
+    include("Julia2Hfss_Initial_files/create_line_intersection.jl")
+    using .create_line_intersection
+
+    include("Julia2Hfss_Initial_files/create_line.jl")
+    using .create_line
+    
 end

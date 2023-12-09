@@ -81,12 +81,6 @@ display(p)
 # savefig("xdata50")
 # End Plotting ##
 
-a = 0
-for i = 1:84
-    l = sqrt.((domain[i+1] - domain[i])^2 + (range[i+1] - range[i])^2)
-    a = a + l
-end
-
 ## HFSS script ##
 
 # file = "hfssScriptFile.vbs"

@@ -1,3 +1,5 @@
+using Plots
+
 function ω_cof(x, y, d)
     N = length(x)
     h = x[N] - x[1]
@@ -52,44 +54,31 @@ function interpolate(f0, x, y, d, K)
 
 end  # interpolation
 
-using Plots, QuadGK
-## Data ##
-# radius = 0.25
-# x = collect(linspace(0, pi, 10))
-# y = (sin.(x))
-# x = [-40; -100/3; -80/3; -20; -40/3; -20/3; 0; 20/3; 40/3; 20; 80/3; 100/3; 40]
-# y = [30; 25; 20; 15; 10; 5; 0; 5; 10; 15; 20; 25; 30]
+# # Data ##
+x = [0, 5, 10, 15, 20.0]
+y = [0, 10, 0, -10, 0.0]
 
-function func(x)
-    if x < 0
-        return -3 / 4 * x
-    else
-        return 3 / 4 * x
-    end
-end
-x = collect(linspace(-40, 40, 50))
-y = func.(x)
 
-# x = [0; 20/3; 40/3; 20; 80/3; 100/3; 40]
-# y = [0; 0; 0; 0.; 0; 0; 0.]
 n = length(x)
-d = 0.2 * ones(n - 1)
+d = 0.4 * ones(n - 1)
 K = 10
 f0 = t -> (y[N] - y[1]) / (x[N] - x[1]) * (t - x[N]) + y[N]
-domain = linspace(x[1], x[end], 1000)
-domain = union(domain, x)
-domain = sort(domain)
+xt = collect(range(x[1], x[end], 2000))
+# domain = union(domain, x)
+# domain = sort(domain)
 f_interpolated = interpolate(x, y, d, K)
-range = f_interpolated.(domain)
+yt = f_interpolated.(xt)
 # # End Data ##
+
+
 # Plotting ##
-p = plot(domain, range, label="Interpolate",
+p = plot(xt, yt, label="Interpolate",
     title="Fractal Interpolation",
     xlabel="x",
     ylabel="y")
 scatter!(x, y, label="Data set")
 display(p)
-savefig("xdata50")
+# savefig("xdata50")
 # End Plotting ##
 
 a = 0

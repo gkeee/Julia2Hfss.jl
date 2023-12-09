@@ -9,14 +9,6 @@ $begin 'InterrogationCache'
 		Status=false
 	$end 'ValidationStatus'
 	$begin 'BodyCaches'
-		$begin '28'
-			$begin 'BoundingBox'
-				Low[3: 0, -10, 0]
-				High[3: 15, 10.006993439363956, 0]
-				Exact=true
-				Valid=true
-			$end 'BoundingBox'
-		$end '28'
 	$end 'BodyCaches'
 	$begin 'IntersectionCaches'
 	$end 'IntersectionCaches'

@@ -30,7 +30,7 @@ module create_line_intersection
             write(file, "\"Line\", \"StartIndex:=\", 0, \"NoOfPoints:=\", 2, \"NoOfSegments:=\", \"0\")), Array(\"NAME:PolylineXSection\", \"XSectionType:=\",  _\n")
             write(file, "\"None\", \"XSectionOrient:=\", \"Auto\", \"XSectionWidth:=\", \"0mm\", \"XSectionTopWidth:=\",  _\n")
             write(file, "\"0mm\", \"XSectionHeight:=\", \"0mm\", \"XSectionNumSegments:=\", \"0\", \"XSectionBendType:=\",  _\n")
-            write(file, "\"Corner\")), Array(\"NAME:Attributes\", \"Name:=\", \"$(LineName)-$(i)\", \"Flags:=\", \"\", \"Color:=\",  _\n")
+            write(file, "\"Corner\")), Array(\"NAME:Attributes\", \"Name:=\", \"$(LineName)_$(i)\", \"Flags:=\", \"\", \"Color:=\",  _\n")
             write(file, "\"(143 175 143)\", \"Transparency:=\", 0, \"PartCoordinateSystem:=\", \"Global\", \"UDMId:=\",  _\n")
             write(file, "\"\", \"MaterialValue:=\", \"\" & Chr(34) & \"vacuum\" & Chr(34) & \"\", \"SurfaceMaterialValue:=\",  _\n")
             write(file, "\"\" & Chr(34) & \"\" & Chr(34) & \"\", \"SolveInside:=\", true, \"ShellElement:=\",  _\n")

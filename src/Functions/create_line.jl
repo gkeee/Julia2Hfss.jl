@@ -1,18 +1,10 @@
-#=
-Parameters:
-1-Project Name already opened.
-2-Package Path --> Location of .vbs file.
-3-Spline Name: Name of Line which will be drawn.
-4-Vector X: X points in a vector.
-5-Vector Y: Y points in a vector.
-=#
-module create_spline 
-    export Cspline
+module create_line 
+    export Cline
     using LaTeXStrings  
-    function Cspline(ProjectName::String, PackagePath::String, SplineName::String, X::Vector, Y::Vector)
+    function Cline(ProjectName::String, PackagePath::String, LineName::String, X::Vector, Y::Vector)
     
         PointsNumber = length(X);
-        file = open("$(PackagePath)\\Julia2Hfss.jl\\src\\Julia2Hfss_Initial_files\\create_spline.vbs", "w")
+        file = open("$(PackagePath)\\Julia2Hfss.jl\\src\\Functions\\create_line.vbs", "w")
         write(file, "Dim oAnsoftApp\n")
         write(file, "Dim oDesktop\n")
         write(file, "Dim oProject\n")
@@ -36,16 +28,21 @@ module create_spline
             end
         end
         write(file, "),  _\n")
-        write(file, "  Array(\"NAME:PolylineSegments\", Array(\"NAME:PLSegment\", \"SegmentType:=\",  _\n")
-        write(file, "  \"Spline\", \"StartIndex:=\", 0, \"NoOfPoints:=\", $(PointsNumber), \"NoOfSegments:=\", \"0\")), Array(\"NAME:PolylineXSection\", \"XSectionType:=\",  _\n")
+        write(file, "  Array(\"NAME:PolylineSegments\", _\n")
+        for i in 1:(PointsNumber-1)
+            write(file, "  Array(\"NAME:PLSegment\", \"SegmentType:=\", \"Line\", \"StartIndex:=\", $(i-1), \"NoOfPoints:=\", 2)")
+            if i != (PointsNumber-1)
+                write(file, ",  _\n")
+            end
+        end
+        write(file, "  ), _\n")
+        write(file, "  Array(\"NAME:PolylineXSection\", \"XSectionType:=\",  _\n")
         write(file, "  \"None\", \"XSectionOrient:=\", \"Auto\", \"XSectionWidth:=\", \"0mm\", \"XSectionTopWidth:=\",  _\n")
         write(file, "  \"0mm\", \"XSectionHeight:=\", \"0mm\", \"XSectionNumSegments:=\", \"0\", \"XSectionBendType:=\",  _\n")
-        write(file, "  \"Corner\")), Array(\"NAME:Attributes\", \"Name:=\", \"$(SplineName)\", \"Flags:=\", \"\", \"Color:=\",  _\n")
-        write(file, "  \"(143 175 143)\", \"Transparency:=\", 0, \"PartCoordinateSystem:=\", \"Global\", \"UDMId:=\",  _\n")
-        write(file, "  \"\", \"MaterialValue:=\", \"\" & Chr(34) & \"vacuum\" & Chr(34) & \"\", \"SurfaceMaterialValue:=\",  _\n")
-        write(file, "  \"\" & Chr(34) & \"\" & Chr(34) & \"\", \"SolveInside:=\", true, \"ShellElement:=\",  _\n")
-        write(file, "  false, \"ShellElementThickness:=\", \"0mm\", \"ReferenceTemperature:=\", \"20cel\", \"IsMaterialEditable:=\",  _\n")
-        write(file, "  true, \"UseMaterialAppearance:=\", false, \"IsLightweight:=\", false)\n")
+        write(file, "  \"Corner\")), Array(\"NAME:Attributes\", \"Name:=\", \"$(LineName)\", \"Flags:=\", \"\", \"Color:=\",  _\n")
+        write(file, "  \"(132 132 193)\", \"Transparency:=\", 0, \"PartCoordinateSystem:=\", \"Global\", \"UDMId:=\",  _\n")
+        write(file, "  \"\", \"MaterialValue:=\", \"\" & Chr(34) & \"vacuum\" & Chr(34) & \"\", _\n")
+        write(file, "  \"SolveInside:=\", true)\n")
         close(file)
     end
 end

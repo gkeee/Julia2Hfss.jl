@@ -4,7 +4,7 @@ module create_rectangle
 
     function Crectangle(ProjectName::String, PackagePath::String, XStart::String, YStart::String, ZStart::String, Width::String, Height::String, WhichAxis::String, Name::String)
     
-        file = open("$(PackagePath)\\Julia2Hfss.jl\\src\\Julia2Hfss_Initial_files\\create_rectangle.vbs", "w")
+        file = open("$(PackagePath)\\Julia2Hfss.jl\\src\\Functions\\create_rectangle.vbs", "w")
         write(file, "Dim oAnsoftApp\n")
         write(file, "Dim oDesktop\n")
         write(file, "Dim oProject\n")

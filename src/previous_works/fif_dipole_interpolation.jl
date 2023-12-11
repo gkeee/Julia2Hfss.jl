@@ -72,6 +72,7 @@ yt = f_interpolated.(xt)
 
 
 # Plotting ##
+#=
 p = plot(xt, yt, label="Interpolate",
     title="Fractal Interpolation",
     xlabel="x",
@@ -79,10 +80,15 @@ p = plot(xt, yt, label="Interpolate",
 scatter!(x, y, label="Data set")
 display(p)
 # savefig("xdata50")
+=#
 # End Plotting ##
 
-## HFSS script ##
 
+
+
+
+## HFSS script ##
+#=
 # file = "hfssScriptFile.vbs"
 file = open("hfssScriptFile_dipole_v_xdata50.vbs", "w")
 write(file, "Dim oHfssApp\n")
@@ -126,3 +132,4 @@ for i = 1:600
 end
 
 close(file)
+=#

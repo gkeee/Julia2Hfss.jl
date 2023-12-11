@@ -58,11 +58,11 @@ module FIF_IFS
 
 
 
-    function transformfif(x::Vector, y::Vector)
+    function transformfif(x::Vector, y::Vector, FreeParameter::Float64, Niter::Int64)
         
         n = length(x)
-        d = 0.4 * ones(n - 1)
-        K = 10
+        d = FreeParameter * ones(n - 1)
+        K = Niter
         f0 = t -> (y[N] - y[1]) / (x[N] - x[1]) * (t - x[N]) + y[N]
         xt = collect(range(x[1], x[end], 2000))
         f_interpolated = interpolate(x, y, d, K)

@@ -20,5 +20,8 @@ module Julia2Hfss
 
     include("Functions/create_line.jl")
     using .create_line
+
+    include("Functions/FIF_IFS.jl")
+    using .FIF_IFS
     
 end

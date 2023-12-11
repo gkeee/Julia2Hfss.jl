@@ -24,4 +24,7 @@ module Julia2Hfss
     include("Functions/FIF_IFS.jl")
     using .FIF_IFS
     
+    include("Functions/Koch_Fractal.jl")
+    using .Koch_Fractal
+
 end

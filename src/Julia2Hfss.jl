@@ -27,9 +27,6 @@ module Julia2Hfss
     include("Functions/Koch_Fractal.jl")
     using .Koch_Fractal
 
-    include("Functions/create_surface.jl")
-    using .create_surface
-
     include("Functions/create_closed_fractal.jl")
     using .create_closed_fractal
 

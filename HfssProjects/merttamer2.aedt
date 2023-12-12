@@ -202,7 +202,7 @@ $begin 'AnsoftProject'
 			WorkingCS=1
 			$begin 'GeometryCore'
 				BlockVersionID=3
-				DataVersion=24
+				DataVersion=25
 				NativeKernel='PARASOLID'
 				NativeKernelVersionID=23
 				Units='mm'
@@ -221,7 +221,7 @@ $begin 'AnsoftProject'
 							IDServerObjectTypeID=0
 							IDServerRangeMin=0
 							IDServerRangeMax=2146483647
-							NextUniqueID=6484
+							NextUniqueID=6498
 							MoveBackwards=false
 						$end 'AnsoftRangedIDServer'
 						$begin 'AnsoftRangedIDServer'
@@ -536,7 +536,7 @@ $begin 'AnsoftProject'
 				DesignInstanceID=1
 				$begin 'WindowPosition'
 					$begin 'EditorWindow'
-						Circuit(Editor3d(View('View Orientation Gadget'=1, WindowPos(3, -1, -1, -9, -38, 32, 32, 1559, 304), OrientationMatrix(4.66892194747925, 0.00139862508513033, 9.17025317903608e-07, 0, -0.001397066982463, 4.66892194747925, -1.60479282840242e-06, 0, -4.24172412749613e-06, -2.29529291573272e-07, 4.66892290115356, 0, -1.75069439411163, -0.505950093269348, -5.16446828842163, 1, 0, -1.94555354118347, 1.94555354118347, -1, 1, -3.94722270965576, 14.276159286499), Drawings[0:], 'View Data'('Render Mode'=1, 'Show Ruler'=1, 'Coordinate Systems View Mode'=1, 'CS Triad View Mode'=0, 'Render Facets'=1, GridVisible=1, GridAutoAdjust=1, GridAutoExtents=1, GridType='Rect', GridStyle='Line', NumPixels=30, dXForGrid=0.02, dYForGrid=0.02, dZForGrid=0.02, dRForGrid=0.02, dThetaForGrid=10), ClipPlanes(ClipPlaneOptions(DisableWhenDrawingNewPlane=true, ForceOpqaueForUnclipped=false, ShowClipped=false, Transparency=0, HandleColor=16776960)))))
+						Circuit(Editor3d(View('View Orientation Gadget'=1, WindowPos(3, -1, -1, -9, -38, 32, 32, 1559, 304), OrientationMatrix(0.449865311384201, 0.000134761896333657, 8.83582558230955e-08, 0, -0.0001346117205685, 0.449865311384201, -1.54626832227223e-07, 0, -4.08703272114508e-07, -2.2115854036997e-08, 0.449865341186523, 0, 0, 0, -5.05448293685913, 1, 0, -2.66627240180969, 2.83565449714661, -1.57158482074738, 1.25636327266693, -1.30757141113281, 11.4165382385254), Drawings[0:], 'View Data'('Render Mode'=1, 'Show Ruler'=1, 'Coordinate Systems View Mode'=1, 'CS Triad View Mode'=0, 'Render Facets'=1, GridVisible=1, GridAutoAdjust=1, GridAutoExtents=1, GridType='Rect', GridStyle='Line', NumPixels=30, dXForGrid=0.2, dYForGrid=0.2, dZForGrid=0.2, dRForGrid=0.2, dThetaForGrid=10), ClipPlanes(ClipPlaneOptions(DisableWhenDrawingNewPlane=true, ForceOpqaueForUnclipped=false, ShowClipped=false, Transparency=0, HandleColor=16776960)))))
 					$end 'EditorWindow'
 				$end 'WindowPosition'
 				$begin 'ReportSetup'

@@ -30,4 +30,7 @@ module Julia2Hfss
     include("Functions/create_surface.jl")
     using .create_surface
 
+    include("Functions/create_closed_fractal.jl")
+    using .create_closed_fractal
+
 end

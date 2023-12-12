@@ -1,7 +1,7 @@
 module create_line 
     export Cline
     using LaTeXStrings  
-    function Cline(ProjectName::String, PackagePath::String, LineName::String, X::Vector, Y::Vector)
+    function Cline(ProjectName::String, PackagePath::String, LineName::String, IsClosed::String, X::Vector, Y::Vector)
     
         PointsNumber = length(X);
         file = open("$(PackagePath)\\Julia2Hfss.jl\\src\\Functions\\create_line.vbs", "w")
@@ -17,8 +17,13 @@ module create_line
         write(file, "Set oProject = oDesktop.SetActiveProject(\"$(ProjectName)\")\n")
         write(file, "Set oDesign = oProject.SetActiveDesign(\"HFSSDesign1\")\n")
         write(file, "Set oEditor = oDesign.SetActiveEditor(\"3D Modeler\")\n")
-        write(file, "oEditor.CreatePolyline Array(\"NAME:PolylineParameters\", \"IsPolylineCovered:=\", true, \"IsPolylineClosed:=\", false,  _\n")
-        write(file, "Array(\"NAME:PolylinePoints\", _\n")
+        if IsClosed == "yes"
+            write(file, "oEditor.CreatePolyline Array(\"NAME:PolylineParameters\", \"IsPolylineCovered:=\", true, \"IsPolylineClosed:=\", true,  _\n")
+            write(file, "Array(\"NAME:PolylinePoints\", _\n")
+        elseif IsClosed == "no"
+            write(file, "oEditor.CreatePolyline Array(\"NAME:PolylineParameters\", \"IsPolylineCovered:=\", true, \"IsPolylineClosed:=\", false,  _\n")
+            write(file, "Array(\"NAME:PolylinePoints\", _\n")
+        end
         for i in 1:PointsNumber
             x=X[i];
             y=Y[i];

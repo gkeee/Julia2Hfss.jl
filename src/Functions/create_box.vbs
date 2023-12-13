@@ -20,9 +20,9 @@ false, "ShellElementThickness:=", "0mm", "ReferenceTemperature:=", "20cel", "IsM
 true, "UseMaterialAppearance:=", false, "IsLightweight:=", false)
 Set oEditor = oDesign.SetActiveEditor("3D Modeler")
 oEditor.ChangeProperty Array("NAME:AllTabs", Array("NAME:Geometry3DAttributeTab", Array("NAME:PropServers",  _
-"Box1"), Array("NAME:ChangedProps", Array("NAME:Name", "Value:=", "RadBox"), Array("NAME:Material", "Value:=",  _
-"" & Chr(34) & "vacuum" & Chr(34) & ""), Array("NAME:Transparent", "Value:=", 1))))
+"Box1"), Array("NAME:ChangedProps", Array("NAME:Name", "Value:=", "MertBox"), Array("NAME:Material", "Value:=",  _
+"" & Chr(34) & "FR4_epoxy" & Chr(34) & ""), Array("NAME:Transparent", "Value:=", 0))))
 oEditor.ChangeProperty Array("NAME:AllTabs", Array("NAME:Geometry3DCmdTab", Array("NAME:PropServers",  _
-"RadBox:CreateBox:1"), Array("NAME:ChangedProps", Array("NAME:Position", "X:=", "-5.0mm", "Y:=",  _
-"-12.5mm", "Z:=", "-10.0mm"), Array("NAME:XSize", "Value:=", "10.0mm"), Array("NAME:YSize", "Value:=",  _
-"25.0mm"), Array("NAME:ZSize", "Value:=", "20.0mm"))))
+"MertBox:CreateBox:1"), Array("NAME:ChangedProps", Array("NAME:Position", "X:=", "-2.5mm", "Y:=",  _
+"-3.5mm", "Z:=", "0.0mm"), Array("NAME:XSize", "Value:=", "5.0mm"), Array("NAME:YSize", "Value:=",  _
+"7.0mm"), Array("NAME:ZSize", "Value:=", "0.8mm"))))

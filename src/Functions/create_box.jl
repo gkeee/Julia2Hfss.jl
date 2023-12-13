@@ -1,8 +1,8 @@
-module create_RadBox 
-    export Cradbox
+module create_box 
+    export Cbox
     using LaTeXStrings  
-    function Cradbox(ProjectName::String, PackagePath::String, Medium::String, Xsize::Float64, Ysize::Float64, Zsize::Float64)
-        file = open("$(PackagePath)\\Julia2Hfss.jl\\src\\Functions\\create_RadBox.vbs", "w")
+    function Cbox(ProjectName::String, PackagePath::String, BoxName::String, Transparency::Int64, Medium::String, Xsize::Float64, Ysize::Float64, Zsize::Float64, Zstart::Float64)
+        file = open("$(PackagePath)\\Julia2Hfss.jl\\src\\Functions\\create_box.vbs", "w")
         write(file, "Dim oAnsoftApp\n")
         write(file, "Dim oDesktop\n")
         write(file, "Dim oProject\n")
@@ -25,11 +25,11 @@ module create_RadBox
         write(file, "true, \"UseMaterialAppearance:=\", false, \"IsLightweight:=\", false)\n")
         write(file, "Set oEditor = oDesign.SetActiveEditor(\"3D Modeler\")\n")
         write(file, "oEditor.ChangeProperty Array(\"NAME:AllTabs\", Array(\"NAME:Geometry3DAttributeTab\", Array(\"NAME:PropServers\",  _\n")
-        write(file, "\"Box1\"), Array(\"NAME:ChangedProps\", Array(\"NAME:Name\", \"Value:=\", \"RadBox\"), Array(\"NAME:Material\", \"Value:=\",  _\n")
-        write(file, "\"\" & Chr(34) & \"$(Medium)\" & Chr(34) & \"\"), Array(\"NAME:Transparent\", \"Value:=\", 1))))\n")
+        write(file, "\"Box1\"), Array(\"NAME:ChangedProps\", Array(\"NAME:Name\", \"Value:=\", \"$(BoxName)\"), Array(\"NAME:Material\", \"Value:=\",  _\n")
+        write(file, "\"\" & Chr(34) & \"$(Medium)\" & Chr(34) & \"\"), Array(\"NAME:Transparent\", \"Value:=\", $(Transparency)))))\n")
         write(file, "oEditor.ChangeProperty Array(\"NAME:AllTabs\", Array(\"NAME:Geometry3DCmdTab\", Array(\"NAME:PropServers\",  _\n")
-        write(file, "\"RadBox:CreateBox:1\"), Array(\"NAME:ChangedProps\", Array(\"NAME:Position\", \"X:=\", \"-$(Xsize/2)mm\", \"Y:=\",  _\n")
-        write(file, "\"-$(Ysize/2)mm\", \"Z:=\", \"-$(Zsize/2)mm\"), Array(\"NAME:XSize\", \"Value:=\", \"$(Xsize)mm\"), Array(\"NAME:YSize\", \"Value:=\",  _\n")
+        write(file, "\"$(BoxName):CreateBox:1\"), Array(\"NAME:ChangedProps\", Array(\"NAME:Position\", \"X:=\", \"-$(Xsize/2)mm\", \"Y:=\",  _\n")
+        write(file, "\"-$(Ysize/2)mm\", \"Z:=\", \"$(Zstart)mm\"), Array(\"NAME:XSize\", \"Value:=\", \"$(Xsize)mm\"), Array(\"NAME:YSize\", \"Value:=\",  _\n")
         write(file, "\"$(Ysize)mm\"), Array(\"NAME:ZSize\", \"Value:=\", \"$(Zsize)mm\"))))\n")
         close(file)
     end

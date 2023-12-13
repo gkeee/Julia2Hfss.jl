@@ -2,7 +2,7 @@ module create_rectangle
     export Crectangle
     using LaTeXStrings
 
-    function Crectangle(ProjectName::String, PackagePath::String, XStart::String, YStart::String, ZStart::String, Width::String, Height::String, WhichAxis::String, Name::String)
+    function Crectangle(ProjectName::String, PackagePath::String, XStart::Float64, YStart::Float64, ZStart::Float64, Width::Float64, Height::Float64, WhichAxis::String, RectName::String)
     
         file = open("$(PackagePath)\\Julia2Hfss.jl\\src\\Functions\\create_rectangle.vbs", "w")
         write(file, "Dim oAnsoftApp\n")
@@ -17,7 +17,14 @@ module create_rectangle
         write(file, "Set oProject = oDesktop.SetActiveProject(\"$(ProjectName)\")\n")
         write(file, "Set oDesign = oProject.SetActiveDesign(\"HFSSDesign1\")\n")
         write(file, "Set oEditor = oDesign.SetActiveEditor(\"3D Modeler\")\n")
-        write(file, "oEditor.CreateRectangle Array(\"NAME:RectangleParameters\", \"IsCovered:=\", true, \"XStart:=\", \"$(XStart)\", \"YStart:=\", \"$(YStart)\", \"ZStart:=\", \"$(ZStart)\", \"Width:=\", \"$(Width)\", \"Height:=\", \"$(Height)\", \"WhichAxis:=\", \"$(WhichAxis)\"), Array(\"NAME:Attributes\", \"Name:=\", \"$(Name)\", \"Flags:=\", \"\" , \"Color:=\", \"(132 132 193)\", \"Transparency:=\", 0, \"PartCoordinateSystem:=\", \"Global\", \"UDMId:=\", \"\", \"MaterialValue:=\", \"\" & Chr(34) & \"vacuum\" & Chr(34) & \"\", \"SolveInside:=\",  true) \n")
+        write(file, "oEditor.CreateRectangle Array(\"NAME:RectangleParameters\", \"IsCovered:=\", true, _\n")
+        write(file, "\"XStart:=\", \"$(XStart)\", \"YStart:=\", \"$(YStart)\", \"ZStart:=\", \"$(ZStart)\", _\n")
+        write(file, "\"Width:=\", \"$(Width)\", \"Height:=\", \"$(Height)\", \"WhichAxis:=\", \"$(WhichAxis)\"), _\n")
+        write(file, "Array(\"NAME:Attributes\", \"Name:=\", \"$(RectName)\", \"Flags:=\", \"\" , \"Color:=\", _\n")
+        write(file, " \"(132 132 193)\", \"Transparency:=\", 0, \"PartCoordinateSystem:=\", _\n")
+        write(file, " \"Global\", \"UDMId:=\", \"\", _\n")
+        write(file ,"\"MaterialValue:=\", \"\" & Chr(34) & \"vacuum\" & Chr(34) & _\n")
+        write(file, "\"\", \"SolveInside:=\",  true)\n")
         close(file)
     end
 end

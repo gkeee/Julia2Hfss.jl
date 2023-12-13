@@ -1,7 +1,7 @@
 module create_line 
     export Cline
     using LaTeXStrings  
-    function Cline(ProjectName::String, PackagePath::String, LineName::String, IsClosed::String, X::Vector, Y::Vector)
+    function Cline(ProjectName::String, PackagePath::String, LineName::String, IsClosed::String, X::Vector, Y::Vector, Zstart::Float64)
     
         PointsNumber = length(X);
         file = open("$(PackagePath)\\Julia2Hfss.jl\\src\\Functions\\create_line.vbs", "w")
@@ -27,7 +27,7 @@ module create_line
         for i in 1:PointsNumber
             x=X[i];
             y=Y[i];
-            write(file, "Array(\"NAME:PLPoint\", \"X:=\", \"$(x)mm\", \"Y:=\", \"$(y)mm\", \"Z:=\", \"0mm\")")
+            write(file, "Array(\"NAME:PLPoint\", \"X:=\", \"$(x)mm\", \"Y:=\", \"$(y)mm\", \"Z:=\", \"$(Zstart)mm\")")
             if i != PointsNumber
                 write(file, ",  _\n")
             end

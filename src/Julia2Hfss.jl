@@ -30,7 +30,7 @@ module Julia2Hfss
     include("Functions/create_closed_fractal.jl")
     using .create_closed_fractal
 
-    include("Functions/create_RadBox.jl")
-    using .create_RadBox
+    include("Functions/create_box.jl")
+    using .create_box
 
 end

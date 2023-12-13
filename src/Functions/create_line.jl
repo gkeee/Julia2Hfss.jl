@@ -1,7 +1,7 @@
 module create_line 
     export Cline
     using LaTeXStrings  
-    function Cline(ProjectName::String, PackagePath::String, LineName::String, IsClosed::String, X::Vector, Y::Vector, Zstart::Float64)
+    function Cline(ProjectName::String, PackagePath::String, LineName::String, IsClosed::String, X::Vector, Y::Vector, Zstart::Float64, PEC::String, PECnumber::Int64)
     
         PointsNumber = length(X);
         file = open("$(PackagePath)\\Julia2Hfss.jl\\src\\Functions\\create_line.vbs", "w")
@@ -48,6 +48,11 @@ module create_line
         write(file, "  \"(132 132 193)\", \"Transparency:=\", 0, \"PartCoordinateSystem:=\", \"Global\", \"UDMId:=\",  _\n")
         write(file, "  \"\", \"MaterialValue:=\", \"\" & Chr(34) & \"vacuum\" & Chr(34) & \"\", _\n")
         write(file, "  \"SolveInside:=\", true)\n")
+        if PEC == "yes"
+            write(file, "Set oModule = oDesign.GetModule(\"BoundarySetup\")\n")
+            write(file, "oModule.AssignPerfectE Array(\"NAME:PerfE$(PECnumber)\", \"Objects:=\", Array(\"$(LineName)\"), _\n")
+            write(file, "\"InfGroundPlane:=\", false)\n")
+        end
         close(file)
     end
 end

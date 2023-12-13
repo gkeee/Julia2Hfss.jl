@@ -2,7 +2,7 @@ module create_rectangle
     export Crectangle
     using LaTeXStrings
 
-    function Crectangle(ProjectName::String, PackagePath::String, XStart::Float64, YStart::Float64, ZStart::Float64, Width::Float64, Height::Float64, WhichAxis::String, RectName::String, PEC::String)
+    function Crectangle(ProjectName::String, PackagePath::String, XStart::Float64, YStart::Float64, ZStart::Float64, Width::Float64, Height::Float64, WhichAxis::String, RectName::String, PEC::String, PECnumber::Int64)
     
         file = open("$(PackagePath)\\Julia2Hfss.jl\\src\\Functions\\create_rectangle.vbs", "w")
         write(file, "Dim oAnsoftApp\n")
@@ -25,9 +25,9 @@ module create_rectangle
         write(file, " \"Global\", \"UDMId:=\", \"\", _\n")
         write(file ,"\"MaterialValue:=\", \"\" & Chr(34) & \"vacuum\" & Chr(34) & _\n")
         write(file, "\"\", \"SolveInside:=\",  true)\n")
-        write(file, "Set oModule = oDesign.GetModule(\"BoundarySetup\")\n")
         if PEC == "yes"
-            write(file, "oModule.AssignPerfectE Array(\"NAME:PerfE1\", \"Objects:=\", Array(\"Ground\"), _\n")
+            write(file, "Set oModule = oDesign.GetModule(\"BoundarySetup\")\n")
+            write(file, "oModule.AssignPerfectE Array(\"NAME:PerfE$(PECnumber)\", \"Objects:=\", Array(\"$(RectName)\"), _\n")
             write(file, "\"InfGroundPlane:=\", false)\n")
         end
         close(file)

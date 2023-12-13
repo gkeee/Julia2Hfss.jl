@@ -11,13 +11,13 @@ Set oProject = oDesktop.SetActiveProject("merttamer2")
 Set oDesign = oProject.SetActiveDesign("HFSSDesign1")
 Set oEditor = oDesign.SetActiveEditor("3D Modeler")
 oEditor.CreateRectangle Array("NAME:RectangleParameters", "IsCovered:=", true, _
-"XStart:=", "-5.0", "YStart:=", "-7.0", "ZStart:=", "0.0", _
-"Width:=", "10.0", "Height:=", "14.0", "WhichAxis:=", "z"), _
-Array("NAME:Attributes", "Name:=", "Ground2", "Flags:=", "" , "Color:=", _
+"XStart:=", "-1.0mm", "YStart:=", "-1.0mm", "ZStart:=", "-0.016mm", _
+"Width:=", "2.0mm", "Height:=", "2.0mm", "WhichAxis:=", "z"), _
+Array("NAME:Attributes", "Name:=", "Ground", "Flags:=", "" , "Color:=", _
  "(132 132 193)", "Transparency:=", 0, "PartCoordinateSystem:=", _
  "Global", "UDMId:=", "", _
 "MaterialValue:=", "" & Chr(34) & "vacuum" & Chr(34) & _
 "", "SolveInside:=",  true)
 Set oModule = oDesign.GetModule("BoundarySetup")
-oModule.AssignPerfectE Array("NAME:PerfE2", "Objects:=", Array("Ground2"), _
+oModule.AssignPerfectE Array("NAME:PerfE2", "Objects:=", Array("Ground"), _
 "InfGroundPlane:=", false)

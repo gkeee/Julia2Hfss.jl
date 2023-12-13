@@ -10,25 +10,526 @@ oDesktop.RestoreWindow
 Set oProject = oDesktop.SetActiveProject("merttamer2")
 Set oDesign = oProject.SetActiveDesign("HFSSDesign1")
 Set oEditor = oDesign.SetActiveEditor("3D Modeler")
-oEditor.CreatePolyline Array("NAME:PolylineParameters", "IsPolylineCovered:=", true, "IsPolylineClosed:=", true,  _
+oEditor.CreatePolyline Array("NAME:PolylineParameters", "IsPolylineCovered:=", true, "IsPolylineClosed:=", false,  _
 Array("NAME:PolylinePoints", _
-Array("NAME:PLPoint", "X:=", "-1mm", "Y:=", "1mm", "Z:=", "0.0mm"),  _
-Array("NAME:PLPoint", "X:=", "1mm", "Y:=", "1mm", "Z:=", "0.0mm"),  _
-Array("NAME:PLPoint", "X:=", "1mm", "Y:=", "-1mm", "Z:=", "0.0mm"),  _
-Array("NAME:PLPoint", "X:=", "-1mm", "Y:=", "-1mm", "Z:=", "0.0mm"),  _
-Array("NAME:PLPoint", "X:=", "-1mm", "Y:=", "1mm", "Z:=", "0.0mm")),  _
+Array("NAME:PLPoint", "X:=", "0.0mm", "Y:=", "0.0mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.012345679012345678mm", "Y:=", "0.0mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.018518518518518517mm", "Y:=", "0.010691671651659735mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.024691358024691357mm", "Y:=", "0.0mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.037037037037037035mm", "Y:=", "0.0mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.043209876543209874mm", "Y:=", "0.010691671651659735mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.037037037037037035mm", "Y:=", "0.02138334330331947mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.04938271604938271mm", "Y:=", "0.02138334330331947mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.05555555555555555mm", "Y:=", "0.032075014954979206mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.061728395061728406mm", "Y:=", "0.02138334330331947mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.07407407407407407mm", "Y:=", "0.02138334330331947mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.06790123456790124mm", "Y:=", "0.010691671651659733mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.07407407407407407mm", "Y:=", "0.0mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.08641975308641972mm", "Y:=", "0.0mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.09259259259259257mm", "Y:=", "0.010691671651659735mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.09876543209876543mm", "Y:=", "0.0mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.1111111111111111mm", "Y:=", "0.0mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.11728395061728394mm", "Y:=", "0.010691671651659735mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.1111111111111111mm", "Y:=", "0.02138334330331947mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.12345679012345678mm", "Y:=", "0.021383343303319473mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.12962962962962962mm", "Y:=", "0.032075014954979206mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.12345679012345678mm", "Y:=", "0.04276668660663894mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.1111111111111111mm", "Y:=", "0.04276668660663894mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.11728395061728394mm", "Y:=", "0.05345835825829868mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.1111111111111111mm", "Y:=", "0.06415002990995841mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.1234567901234568mm", "Y:=", "0.06415002990995843mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.12962962962962962mm", "Y:=", "0.07484170156161815mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.13580246913580246mm", "Y:=", "0.06415002990995843mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.14814814814814814mm", "Y:=", "0.06415002990995841mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.15432098765432095mm", "Y:=", "0.07484170156161814mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.14814814814814814mm", "Y:=", "0.08553337321327788mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.16049382716049382mm", "Y:=", "0.08553337321327788mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.16666666666666666mm", "Y:=", "0.09622504486493762mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.17283950617283952mm", "Y:=", "0.08553337321327788mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.18518518518518523mm", "Y:=", "0.08553337321327788mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.1790123456790124mm", "Y:=", "0.07484170156161814mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.18518518518518523mm", "Y:=", "0.06415002990995841mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.19753086419753088mm", "Y:=", "0.06415002990995841mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.20370370370370375mm", "Y:=", "0.07484170156161815mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.2098765432098766mm", "Y:=", "0.06415002990995841mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.22222222222222224mm", "Y:=", "0.06415002990995841mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.21604938271604945mm", "Y:=", "0.05345835825829867mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.22222222222222224mm", "Y:=", "0.04276668660663894mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.2098765432098766mm", "Y:=", "0.04276668660663893mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.20370370370370375mm", "Y:=", "0.0320750149549792mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.2098765432098766mm", "Y:=", "0.02138334330331948mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.22222222222222224mm", "Y:=", "0.02138334330331948mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.2160493827160494mm", "Y:=", "0.01069167165165974mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.22222222222222224mm", "Y:=", "0.0mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.2345679012345679mm", "Y:=", "0.0mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.24074074074074073mm", "Y:=", "0.010691671651659735mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.24691358024691357mm", "Y:=", "0.0mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.2592592592592592mm", "Y:=", "0.0mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.26543209876543206mm", "Y:=", "0.010691671651659735mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.2592592592592592mm", "Y:=", "0.02138334330331947mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.2716049382716049mm", "Y:=", "0.02138334330331947mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.27777777777777773mm", "Y:=", "0.032075014954979206mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.2839506172839506mm", "Y:=", "0.02138334330331947mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.2962962962962963mm", "Y:=", "0.02138334330331947mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.2901234567901234mm", "Y:=", "0.010691671651659733mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.2962962962962963mm", "Y:=", "0.0mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.3086419753086419mm", "Y:=", "0.0mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.31481481481481477mm", "Y:=", "0.010691671651659735mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.32098765432098764mm", "Y:=", "0.0mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.3333333333333333mm", "Y:=", "0.0mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.3395061728395062mm", "Y:=", "0.010691671651659735mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.3333333333333333mm", "Y:=", "0.021383343303319473mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.345679012345679mm", "Y:=", "0.02138334330331947mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.35185185185185186mm", "Y:=", "0.032075014954979206mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.345679012345679mm", "Y:=", "0.042766686606638946mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.3333333333333333mm", "Y:=", "0.042766686606638946mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.3395061728395062mm", "Y:=", "0.05345835825829868mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.3333333333333333mm", "Y:=", "0.06415002990995841mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.345679012345679mm", "Y:=", "0.06415002990995843mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.35185185185185186mm", "Y:=", "0.07484170156161817mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.35802469135802467mm", "Y:=", "0.06415002990995843mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.37037037037037035mm", "Y:=", "0.06415002990995843mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.37654320987654316mm", "Y:=", "0.07484170156161812mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.37037037037037035mm", "Y:=", "0.08553337321327788mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.38271604938271603mm", "Y:=", "0.08553337321327788mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.3888888888888889mm", "Y:=", "0.09622504486493762mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.38271604938271603mm", "Y:=", "0.10691671651659736mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.37037037037037035mm", "Y:=", "0.10691671651659736mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.3765432098765432mm", "Y:=", "0.1176083881682571mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.37037037037037035mm", "Y:=", "0.12830005981991682mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.35802469135802467mm", "Y:=", "0.12830005981991682mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.35185185185185186mm", "Y:=", "0.1176083881682571mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.345679012345679mm", "Y:=", "0.12830005981991682mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.3333333333333333mm", "Y:=", "0.12830005981991682mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.3395061728395062mm", "Y:=", "0.1389917314715766mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.3333333333333333mm", "Y:=", "0.1496834031232363mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.345679012345679mm", "Y:=", "0.1496834031232363mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.35185185185185186mm", "Y:=", "0.16037507477489604mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.345679012345679mm", "Y:=", "0.17106674642655575mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.3333333333333333mm", "Y:=", "0.17106674642655578mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.3395061728395062mm", "Y:=", "0.18175841807821552mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.3333333333333333mm", "Y:=", "0.19245008972987526mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.34567901234567905mm", "Y:=", "0.1924500897298753mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.35185185185185186mm", "Y:=", "0.20314176138153503mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.3580246913580247mm", "Y:=", "0.1924500897298753mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.3703703703703704mm", "Y:=", "0.1924500897298753mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.3765432098765432mm", "Y:=", "0.203141761381535mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.3703703703703704mm", "Y:=", "0.21383343303319477mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.3827160493827161mm", "Y:=", "0.21383343303319477mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.3888888888888889mm", "Y:=", "0.22452510468485448mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.39506172839506176mm", "Y:=", "0.2138334330331948mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.40740740740740744mm", "Y:=", "0.21383343303319474mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.4012345679012346mm", "Y:=", "0.20314176138153503mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.40740740740740744mm", "Y:=", "0.1924500897298753mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.4197530864197531mm", "Y:=", "0.1924500897298753mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.42592592592592593mm", "Y:=", "0.203141761381535mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.4320987654320988mm", "Y:=", "0.19245008972987526mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.4444444444444444mm", "Y:=", "0.19245008972987526mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.4506172839506173mm", "Y:=", "0.20314176138153497mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.4444444444444444mm", "Y:=", "0.21383343303319471mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.4567901234567901mm", "Y:=", "0.21383343303319471mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.4629629629629629mm", "Y:=", "0.22452510468485443mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.4567901234567901mm", "Y:=", "0.2352167763365142mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.4444444444444444mm", "Y:=", "0.23521677633651417mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.4506172839506173mm", "Y:=", "0.2459084479881739mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.4444444444444444mm", "Y:=", "0.25660011963983365mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.45679012345679015mm", "Y:=", "0.25660011963983365mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.46296296296296297mm", "Y:=", "0.2672917912914934mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.4691358024691358mm", "Y:=", "0.25660011963983365mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.4814814814814815mm", "Y:=", "0.25660011963983365mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.48765432098765427mm", "Y:=", "0.2672917912914934mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.4814814814814815mm", "Y:=", "0.2779834629431531mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.49382716049382713mm", "Y:=", "0.2779834629431531mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.5mm", "Y:=", "0.28867513459481287mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.506172839506173mm", "Y:=", "0.2779834629431531mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.5185185185185186mm", "Y:=", "0.2779834629431531mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.5123456790123458mm", "Y:=", "0.2672917912914934mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.5185185185185186mm", "Y:=", "0.25660011963983365mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.5308641975308643mm", "Y:=", "0.25660011963983365mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.5370370370370372mm", "Y:=", "0.2672917912914934mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.54320987654321mm", "Y:=", "0.25660011963983365mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.5555555555555557mm", "Y:=", "0.25660011963983365mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.5493827160493828mm", "Y:=", "0.2459084479881739mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.5555555555555557mm", "Y:=", "0.23521677633651417mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.54320987654321mm", "Y:=", "0.23521677633651417mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.5370370370370372mm", "Y:=", "0.22452510468485443mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.54320987654321mm", "Y:=", "0.21383343303319474mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.5555555555555557mm", "Y:=", "0.21383343303319474mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.5493827160493828mm", "Y:=", "0.203141761381535mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.5555555555555557mm", "Y:=", "0.19245008972987526mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.5679012345679013mm", "Y:=", "0.19245008972987526mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.5740740740740742mm", "Y:=", "0.203141761381535mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.580246913580247mm", "Y:=", "0.19245008972987526mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.5925925925925927mm", "Y:=", "0.19245008972987526mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.5987654320987655mm", "Y:=", "0.203141761381535mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.5925925925925927mm", "Y:=", "0.21383343303319474mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.6049382716049384mm", "Y:=", "0.21383343303319474mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.6111111111111113mm", "Y:=", "0.22452510468485448mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.617283950617284mm", "Y:=", "0.21383343303319471mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.6296296296296298mm", "Y:=", "0.21383343303319474mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.6234567901234569mm", "Y:=", "0.203141761381535mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.6296296296296298mm", "Y:=", "0.19245008972987526mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.6419753086419754mm", "Y:=", "0.19245008972987526mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.6481481481481483mm", "Y:=", "0.203141761381535mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.6543209876543211mm", "Y:=", "0.19245008972987526mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.6666666666666667mm", "Y:=", "0.19245008972987526mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.660493827160494mm", "Y:=", "0.18175841807821547mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.6666666666666667mm", "Y:=", "0.17106674642655573mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.6543209876543211mm", "Y:=", "0.17106674642655573mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.6481481481481484mm", "Y:=", "0.16037507477489601mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.6543209876543211mm", "Y:=", "0.1496834031232363mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.6666666666666669mm", "Y:=", "0.14968340312323627mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.660493827160494mm", "Y:=", "0.13899173147157654mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.6666666666666667mm", "Y:=", "0.12830005981991682mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.6543209876543211mm", "Y:=", "0.12830005981991677mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.6481481481481483mm", "Y:=", "0.11760838816825708mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.6419753086419755mm", "Y:=", "0.1283000598199168mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.6296296296296298mm", "Y:=", "0.1283000598199168mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.6234567901234569mm", "Y:=", "0.11760838816825706mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.6296296296296298mm", "Y:=", "0.10691671651659734mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.6172839506172841mm", "Y:=", "0.10691671651659734mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.6111111111111113mm", "Y:=", "0.0962250448649376mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.617283950617284mm", "Y:=", "0.08553337321327789mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.6296296296296298mm", "Y:=", "0.08553337321327789mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.6234567901234569mm", "Y:=", "0.07484170156161815mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.6296296296296298mm", "Y:=", "0.06415002990995844mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.6419753086419754mm", "Y:=", "0.06415002990995841mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.6481481481481483mm", "Y:=", "0.07484170156161818mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.6543209876543211mm", "Y:=", "0.06415002990995844mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.6666666666666667mm", "Y:=", "0.06415002990995844mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.660493827160494mm", "Y:=", "0.05345835825829867mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.6666666666666667mm", "Y:=", "0.04276668660663896mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.6543209876543211mm", "Y:=", "0.04276668660663896mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.6481481481481483mm", "Y:=", "0.03207501495497922mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.6543209876543211mm", "Y:=", "0.02138334330331948mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.6666666666666667mm", "Y:=", "0.02138334330331948mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.660493827160494mm", "Y:=", "0.01069167165165974mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.6666666666666667mm", "Y:=", "0.0mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.6790123456790123mm", "Y:=", "0.0mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.6851851851851851mm", "Y:=", "0.010691671651659735mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.691358024691358mm", "Y:=", "0.0mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.7037037037037037mm", "Y:=", "0.0mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.7098765432098765mm", "Y:=", "0.010691671651659735mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.7037037037037037mm", "Y:=", "0.02138334330331947mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.7160493827160493mm", "Y:=", "0.02138334330331947mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.7222222222222222mm", "Y:=", "0.032075014954979206mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.7283950617283951mm", "Y:=", "0.02138334330331947mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.7407407407407407mm", "Y:=", "0.02138334330331947mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.7345679012345678mm", "Y:=", "0.010691671651659733mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.7407407407407407mm", "Y:=", "0.0mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.7530864197530863mm", "Y:=", "0.0mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.7592592592592592mm", "Y:=", "0.010691671651659735mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.7654320987654321mm", "Y:=", "0.0mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.7777777777777777mm", "Y:=", "0.0mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.7839506172839505mm", "Y:=", "0.010691671651659735mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.7777777777777777mm", "Y:=", "0.02138334330331947mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.7901234567901234mm", "Y:=", "0.021383343303319473mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.7962962962962963mm", "Y:=", "0.032075014954979206mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.7901234567901234mm", "Y:=", "0.04276668660663894mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.7777777777777777mm", "Y:=", "0.04276668660663894mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.7839506172839505mm", "Y:=", "0.05345835825829868mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.7777777777777777mm", "Y:=", "0.06415002990995841mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.7901234567901234mm", "Y:=", "0.06415002990995843mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.7962962962962963mm", "Y:=", "0.07484170156161815mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.8024691358024691mm", "Y:=", "0.06415002990995843mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.8148148148148148mm", "Y:=", "0.06415002990995841mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.8209876543209875mm", "Y:=", "0.07484170156161814mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.8148148148148148mm", "Y:=", "0.08553337321327788mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.8271604938271604mm", "Y:=", "0.08553337321327788mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.8333333333333333mm", "Y:=", "0.09622504486493762mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.8395061728395061mm", "Y:=", "0.08553337321327788mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.8518518518518519mm", "Y:=", "0.08553337321327788mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.845679012345679mm", "Y:=", "0.07484170156161814mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.8518518518518519mm", "Y:=", "0.06415002990995841mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.8641975308641975mm", "Y:=", "0.06415002990995841mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.8703703703703703mm", "Y:=", "0.07484170156161815mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.8765432098765432mm", "Y:=", "0.06415002990995841mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.8888888888888888mm", "Y:=", "0.06415002990995841mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.8827160493827161mm", "Y:=", "0.05345835825829867mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.8888888888888888mm", "Y:=", "0.04276668660663894mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.8765432098765432mm", "Y:=", "0.04276668660663893mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.8703703703703703mm", "Y:=", "0.0320750149549792mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.8765432098765432mm", "Y:=", "0.02138334330331948mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.8888888888888888mm", "Y:=", "0.02138334330331948mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.882716049382716mm", "Y:=", "0.01069167165165974mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.8888888888888888mm", "Y:=", "0.0mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.9012345679012346mm", "Y:=", "0.0mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.9074074074074073mm", "Y:=", "0.010691671651659735mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.9135802469135802mm", "Y:=", "0.0mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.9259259259259258mm", "Y:=", "0.0mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.9320987654320987mm", "Y:=", "0.010691671651659735mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.9259259259259258mm", "Y:=", "0.02138334330331947mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.9382716049382716mm", "Y:=", "0.02138334330331947mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.9444444444444444mm", "Y:=", "0.032075014954979206mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.9506172839506173mm", "Y:=", "0.02138334330331947mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.9629629629629629mm", "Y:=", "0.02138334330331947mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.95679012345679mm", "Y:=", "0.010691671651659733mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.9629629629629629mm", "Y:=", "0.0mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.9753086419753085mm", "Y:=", "0.0mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.9814814814814814mm", "Y:=", "0.010691671651659735mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "0.9876543209876543mm", "Y:=", "0.0mm", "Z:=", "0.0mm"),  _
+Array("NAME:PLPoint", "X:=", "1.0mm", "Y:=", "0.0mm", "Z:=", "0.0mm")),  _
   Array("NAME:PolylineSegments", _
   Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 0, "NoOfPoints:=", 2),  _
   Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 1, "NoOfPoints:=", 2),  _
   Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 2, "NoOfPoints:=", 2),  _
-  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 3, "NoOfPoints:=", 2)  ), _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 3, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 4, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 5, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 6, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 7, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 8, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 9, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 10, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 11, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 12, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 13, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 14, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 15, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 16, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 17, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 18, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 19, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 20, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 21, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 22, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 23, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 24, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 25, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 26, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 27, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 28, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 29, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 30, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 31, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 32, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 33, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 34, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 35, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 36, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 37, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 38, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 39, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 40, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 41, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 42, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 43, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 44, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 45, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 46, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 47, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 48, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 49, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 50, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 51, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 52, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 53, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 54, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 55, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 56, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 57, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 58, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 59, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 60, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 61, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 62, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 63, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 64, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 65, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 66, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 67, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 68, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 69, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 70, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 71, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 72, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 73, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 74, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 75, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 76, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 77, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 78, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 79, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 80, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 81, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 82, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 83, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 84, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 85, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 86, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 87, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 88, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 89, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 90, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 91, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 92, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 93, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 94, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 95, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 96, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 97, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 98, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 99, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 100, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 101, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 102, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 103, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 104, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 105, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 106, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 107, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 108, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 109, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 110, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 111, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 112, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 113, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 114, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 115, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 116, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 117, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 118, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 119, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 120, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 121, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 122, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 123, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 124, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 125, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 126, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 127, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 128, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 129, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 130, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 131, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 132, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 133, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 134, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 135, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 136, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 137, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 138, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 139, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 140, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 141, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 142, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 143, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 144, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 145, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 146, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 147, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 148, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 149, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 150, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 151, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 152, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 153, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 154, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 155, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 156, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 157, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 158, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 159, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 160, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 161, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 162, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 163, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 164, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 165, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 166, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 167, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 168, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 169, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 170, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 171, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 172, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 173, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 174, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 175, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 176, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 177, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 178, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 179, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 180, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 181, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 182, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 183, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 184, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 185, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 186, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 187, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 188, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 189, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 190, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 191, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 192, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 193, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 194, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 195, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 196, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 197, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 198, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 199, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 200, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 201, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 202, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 203, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 204, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 205, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 206, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 207, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 208, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 209, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 210, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 211, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 212, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 213, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 214, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 215, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 216, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 217, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 218, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 219, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 220, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 221, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 222, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 223, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 224, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 225, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 226, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 227, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 228, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 229, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 230, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 231, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 232, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 233, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 234, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 235, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 236, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 237, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 238, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 239, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 240, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 241, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 242, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 243, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 244, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 245, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 246, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 247, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 248, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 249, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 250, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 251, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 252, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 253, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 254, "NoOfPoints:=", 2),  _
+  Array("NAME:PLSegment", "SegmentType:=", "Line", "StartIndex:=", 255, "NoOfPoints:=", 2)  ), _
   Array("NAME:PolylineXSection", "XSectionType:=",  _
   "None", "XSectionOrient:=", "Auto", "XSectionWidth:=", "0mm", "XSectionTopWidth:=",  _
   "0mm", "XSectionHeight:=", "0mm", "XSectionNumSegments:=", "0", "XSectionBendType:=",  _
-  "Corner")), Array("NAME:Attributes", "Name:=", "Patch2", "Flags:=", "", "Color:=",  _
+  "Corner")), Array("NAME:Attributes", "Name:=", "Deneme", "Flags:=", "", "Color:=",  _
   "(132 132 193)", "Transparency:=", 0, "PartCoordinateSystem:=", "Global", "UDMId:=",  _
   "", "MaterialValue:=", "" & Chr(34) & "vacuum" & Chr(34) & "", _
   "SolveInside:=", true)
-Set oModule = oDesign.GetModule("BoundarySetup")
-oModule.AssignPerfectE Array("NAME:PerfE2", "Objects:=", Array("Patch2"), _
-"InfGroundPlane:=", false)

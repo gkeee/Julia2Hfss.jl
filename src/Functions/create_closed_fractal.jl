@@ -1,7 +1,7 @@
 module create_closed_fractal 
     export Cclosedfractal
     using LaTeXStrings  
-    function Cclosedfractal(ProjectName::String, PackagePath::String, LineName::String, Geometry::String, Length::Float64 )
+    function Cclosedfractal(ProjectName::String, PackagePath::String, LineName::String, Geometry::String, Length::Float64, PEC::String, PECnumber::Int64 )
         
         file = open("$(PackagePath)\\Julia2Hfss.jl\\src\\Functions\\create_closed_fractal.vbs", "w")
         write(file, "Dim oAnsoftApp\n")
@@ -24,7 +24,7 @@ module create_closed_fractal
             write(file, "\"0mm\", \"TranslateVectorZ:=\", \"0mm\")\n")
             write(file, "Set oEditor = oDesign.SetActiveEditor(\"3D Modeler\")\n")
             write(file, "oEditor.ChangeProperty Array(\"NAME:AllTabs\", Array(\"NAME:Geometry3DCmdTab\", Array(\"NAME:PropServers\",  _\n")
-            write(file, "\"KochLine:Move:1\"), Array(\"NAME:ChangedProps\", Array(\"NAME:Move Vector\", \"X:=\", \"-$(Length/2)mm\", \"Y:=\",  _\n")
+            write(file, "\"$(LineName):Move:1\"), Array(\"NAME:ChangedProps\", Array(\"NAME:Move Vector\", \"X:=\", \"-$(Length/2)mm\", \"Y:=\",  _\n")
             write(file, "\"$(Length/2)mm\", \"Z:=\", \"0mm\"))))\n")
             write(file, "Set oEditor = oDesign.SetActiveEditor(\"3D Modeler\")\n")
             for i in 1:3
@@ -52,7 +52,12 @@ module create_closed_fractal
         
         else println("Geometry Options:\n-square\n-triangle\n-rectangle");     
         end
-        
+        if PEC == "yes"
+            write(file, "Set oModule = oDesign.GetModule(\"BoundarySetup\")\n")
+            write(file, "oModule.AssignPerfectE Array(\"NAME:PerfE$(PECnumber)\", \"Objects:=\", Array(\"$(LineName)3\"), _\n")
+            write(file, "\"InfGroundPlane:=\", false)\n")
+        end
+
         close(file)
 
     end

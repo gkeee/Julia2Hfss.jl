@@ -2,9 +2,9 @@ module create_rectangle
     export Crectangle
     using LaTeXStrings
 
-    function Crectangle(ProjectName::String, PackagePath::String, XStart::Float64, YStart::Float64, ZStart::Float64, Width::Float64, Height::Float64, WhichAxis::String, RectName::String, PEC::String, PECnumber::Int64)
+    function Crectangle(ProjectName::String, VBSfilePath::String, XStart::Float64, YStart::Float64, ZStart::Float64, Width::Float64, Height::Float64, WhichAxis::String, RectName::String, PEC::String, PECnumber::Int64)
     
-        file = open("$(PackagePath)\\Julia2Hfss.jl\\src\\Functions\\create_rectangle.vbs", "w")
+        file = open("$(VBSfilePath)\\create_rectangle.vbs", "w")
         write(file, "Dim oAnsoftApp\n")
         write(file, "Dim oDesktop\n")
         write(file, "Dim oProject\n")

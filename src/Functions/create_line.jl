@@ -1,10 +1,10 @@
 module create_line 
     export Cline
     using LaTeXStrings  
-    function Cline(ProjectName::String, PackagePath::String, LineName::String, IsClosed::String, X::Vector, Y::Vector, Zstart::Float64, PEC::String, PECnumber::Int64)
+    function Cline(ProjectName::String, VBSfilePath::String, LineName::String, IsClosed::String, X::Vector, Y::Vector, Zstart::Float64, PEC::String, PECnumber::Int64)
     
         PointsNumber = length(X);
-        file = open("$(PackagePath)\\Julia2Hfss.jl\\src\\Functions\\create_line.vbs", "w")
+        file = open("$(VBSfilePath)\\create_line.vbs", "w")
         write(file, "Dim oAnsoftApp\n")
         write(file, "Dim oDesktop\n")
         write(file, "Dim oProject\n")

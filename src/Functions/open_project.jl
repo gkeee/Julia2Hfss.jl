@@ -2,9 +2,9 @@ module open_project
     export openproject
     using LaTeXStrings
 
-    function openproject(ProjectName::String, PackagePath::String)
+    function openproject(ProjectName::String, ProjectPath::String, VBSfilePath::String)
     
-        file = open("$(PackagePath)\\Julia2Hfss.jl\\src\\Functions\\open_project.vbs", "w")
+        file = open("$(VBSfilePath)\\Julia2Hfss.jl\\src\\Functions\\open_project.vbs", "w")
         write(file, "Dim oAnsoftApp\n")
         write(file, "Dim oDesktop\n")
         write(file, "Dim oProject\n")
@@ -16,7 +16,7 @@ module open_project
         write(file, "Set oAnsoftApp = CreateObject(\"AnsoftHfss.HfssScriptInterface\")\n")
         write(file, "Set oDesktop = oAnsoftApp.GetAppDesktop()\n")
         write(file, "oDesktop.RestoreWindow\n")
-        write(file, "oDesktop.OpenProject  \"$(PackagePath)\\Julia2Hfss.jl\\HfssProjects\\$(ProjectName).aedt\"\n")
+        write(file, "oDesktop.OpenProject  \"$(ProjectPath)\\$(ProjectName).aedt\"\n")
         close(file)
     end
 end

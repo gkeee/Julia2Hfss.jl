@@ -9,10 +9,10 @@ Parameters:
 module create_spline 
     export Cspline
     using LaTeXStrings  
-    function Cspline(ProjectName::String, PackagePath::String, SplineName::String, X::Vector, Y::Vector)
+    function Cspline(ProjectName::String, VBSfilePath::String, SplineName::String, X::Vector, Y::Vector)
     
         PointsNumber = length(X);
-        file = open("$(PackagePath)\\Julia2Hfss.jl\\src\\Functions\\create_spline.vbs", "w")
+        file = open("$(VBSfilePath)\\create_spline.vbs", "w")
         write(file, "Dim oAnsoftApp\n")
         write(file, "Dim oDesktop\n")
         write(file, "Dim oProject\n")

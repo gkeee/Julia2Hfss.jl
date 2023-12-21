@@ -1,9 +1,9 @@
 module create_closed_fractal 
     export Cclosedfractal
     using LaTeXStrings  
-    function Cclosedfractal(ProjectName::String, PackagePath::String, LineName::String, Geometry::String, Length::Float64, PEC::String, PECnumber::Int64 )
+    function Cclosedfractal(ProjectName::String, VBSfilePath::String, LineName::String, Geometry::String, Length::Float64, PEC::String, PECnumber::Int64 )
         
-        file = open("$(PackagePath)\\Julia2Hfss.jl\\src\\Functions\\create_closed_fractal.vbs", "w")
+        file = open("$(VBSfilePath)\\create_closed_fractal.vbs", "w")
         write(file, "Dim oAnsoftApp\n")
         write(file, "Dim oDesktop\n")
         write(file, "Dim oProject\n")

@@ -1,10 +1,10 @@
 module create_line_intersection 
     export Clineintsec
     using LaTeXStrings  
-    function Clineintsec(ProjectName::String, PackagePath::String, LineName::String, X::Vector, Y::Vector)
+    function Clineintsec(ProjectName::String, VBSfilePath::String, LineName::String, X::Vector, Y::Vector)
     
         PointsNumber = length(X);
-        file = open("$(PackagePath)\\Julia2Hfss.jl\\src\\Functions\\create_line_intersection.vbs", "w")
+        file = open("$(VBSfilePath)\\create_line_intersection.vbs", "w")
         write(file, "Dim oAnsoftApp\n")
         write(file, "Dim oDesktop\n")
         write(file, "Dim oProject\n")

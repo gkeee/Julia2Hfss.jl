@@ -41,20 +41,51 @@ module create_closed_fractal
 
             end
             write(file, "oEditor.Unite Array(\"NAME:Selections\", \"Selections:=\",  _\n")
-            write(file, "\"$(LineName)3,$(LineName)2,$(LineName)1,$(LineName)\"), Array(\"NAME:UniteParameters\", \"KeepOriginals:=\",  _\n")
+            write(file, "\"$(LineName),$(LineName)1,$(LineName)2,$(LineName)3\"), Array(\"NAME:UniteParameters\", \"KeepOriginals:=\",  _\n")
             write(file, "false, \"TurnOnNBodyBoolean:=\", true)\n")
-            write(file, "oEditor.CoverLines Array(\"NAME:Selections\", \"Selections:=\", \"$(LineName)3\", \"NewPartsModelFlag:=\",  _\n")
+            write(file, "oEditor.CoverLines Array(\"NAME:Selections\", \"Selections:=\", \"$(LineName)\", \"NewPartsModelFlag:=\",  _\n")
             write(file, "\"Model\")\n")
 
         elseif Geometry == "triangle"
-        
+            
+            write(file, "oEditor.Rotate Array(\"NAME:Selections\", \"Selections:=\", \"$(LineName)\", \"NewPartsModelFlag:=\",  _\n")
+            write(file, "\"Model\"), Array(\"NAME:RotateParameters\", \"RotateAxis:=\", \"Z\", \"RotateAngle:=\",  _\n")
+            write(file, "\"-60deg\")\n")
+            write(file, "oEditor.Copy Array(\"NAME:Selections\", \"Selections:=\", \"$(LineName)\")\n")
+            write(file, "oEditor.Paste\n")
+            write(file, "oEditor.Mirror Array(\"NAME:Selections\", \"Selections:=\", \"$(LineName)1\", \"NewPartsModelFlag:=\",  _\n")
+            write(file, "\"Model\"), Array(\"NAME:MirrorParameters\", \"MirrorBaseX:=\", \"0mm\", \"MirrorBaseY:=\",  _\n")
+            write(file, "\"-0.2mm\", \"MirrorBaseZ:=\", \"0mm\", \"MirrorNormalX:=\", \"-$(Length)mm\", \"MirrorNormalY:=\",  _\n") #Base olayına dikkat et.
+            write(file, "\"0mm\", \"MirrorNormalZ:=\", \"0mm\")\n")
+            write(file, "Set oEditor = oDesign.SetActiveEditor(\"3D Modeler\")\n")
+            write(file, "oEditor.Copy Array(\"NAME:Selections\", \"Selections:=\", \"$(LineName)\")\n")
+            write(file, "oEditor.Paste\n")
+            write(file, "oEditor.Rotate Array(\"NAME:Selections\", \"Selections:=\", \"$(LineName)2\", \"NewPartsModelFlag:=\",  _\n")
+            write(file, "\"Model\"), Array(\"NAME:RotateParameters\", \"RotateAxis:=\", \"Z\", \"RotateAngle:=\",  _\n")
+            write(file, "\"60deg\")\n")
+            write(file, "oEditor.Mirror Array(\"NAME:Selections\", \"Selections:=\", \"$(LineName)2\", \"NewPartsModelFlag:=\",  _\n")
+            write(file, "\"Model\"), Array(\"NAME:MirrorParameters\", \"MirrorBaseX:=\", \"0.5mm\", \"MirrorBaseY:=\",  _\n") #Base olayına dikkat et.
+            write(file, "\"0mm\", \"MirrorBaseZ:=\", \"0mm\", \"MirrorNormalX:=\", \"0mm\", \"MirrorNormalY:=\",  _\n")
+            write(file, "\"-$(Length)mm\", \"MirrorNormalZ:=\", \"0mm\")\n")
+            write(file, "oEditor.Move Array(\"NAME:Selections\", \"Selections:=\", \"$(LineName)2\", \"NewPartsModelFlag:=\",  _\n")
+            write(file, "\"Model\"), Array(\"NAME:TranslateParameters\", \"TranslateVectorX:=\", \"-$(Length/2)mm\", \"TranslateVectorY:=\",  _\n")
+            write(file, "\"(-(sqrt(3) * $(Length))/2) mm\", \"TranslateVectorZ:=\", \"0mm\")\n")
+            write(file, "Set oEditor = oDesign.SetActiveEditor(\"3D Modeler\")\n")
+            write(file, "oEditor.Unite Array(\"NAME:Selections\", \"Selections:=\", \"$(LineName),$(LineName)1,$(LineName)2\"), Array(\"NAME:UniteParameters\", \"KeepOriginals:=\",  _\n")
+            write(file, "false, \"TurnOnNBodyBoolean:=\", true)\n")
+            write(file, "oEditor.CoverLines Array(\"NAME:Selections\", \"Selections:=\", \"$(LineName)\", \"NewPartsModelFlag:=\",  _\n")
+            write(file, "\"Model\")\n")
+            write(file, "oEditor.Move Array(\"NAME:Selections\", \"Selections:=\", \"$(LineName)\", \"NewPartsModelFlag:=\",  _\n")
+            write(file, "\"Model\"), Array(\"NAME:TranslateParameters\", \"TranslateVectorX:=\", \"0mm\", \"TranslateVectorY:=\",  _\n")
+            write(file, "\"((sqrt(3) * $(Length))/3) mm\", \"TranslateVectorZ:=\", \"0mm\")\n")
+
         elseif Geometry == "rectangle"
         
         else println("Geometry Options:\n-square\n-triangle\n-rectangle");     
         end
         if PEC == "yes"
             write(file, "Set oModule = oDesign.GetModule(\"BoundarySetup\")\n")
-            write(file, "oModule.AssignPerfectE Array(\"NAME:PerfE$(PECnumber)\", \"Objects:=\", Array(\"$(LineName)3\"), _\n")
+            write(file, "oModule.AssignPerfectE Array(\"NAME:PerfE$(PECnumber)\", \"Objects:=\", Array(\"$(LineName)\"), _\n")
             write(file, "\"InfGroundPlane:=\", false)\n")
         end
 

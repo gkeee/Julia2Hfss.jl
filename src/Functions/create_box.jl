@@ -1,7 +1,7 @@
 module create_box 
     export Cbox
     using LaTeXStrings  
-    function Cbox(ProjectName::String, VBSfilePath::String, BoxName::String, Transparency::Int64, Medium::String, Xsize::Float64, Ysize::Float64, Zsize::Float64, Zstart::Float64)
+    function Cbox(ProjectName::String, VBSfilePath::String, BoxName::String, Transparency::Float64, Medium::String, Xsize::Float64, Ysize::Float64, Zsize::Float64, Zstart::Float64)
         file = open("$(VBSfilePath)\\create_box.vbs", "w")
         write(file, "Dim oAnsoftApp\n")
         write(file, "Dim oDesktop\n")

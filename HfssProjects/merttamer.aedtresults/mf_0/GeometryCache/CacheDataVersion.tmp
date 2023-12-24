@@ -1,9 +1,0 @@
-$begin 'CacheDataVersion'
-<<<<<<< HEAD
-	DataVersion=2
-=======
-	DataVersion=-1
->>>>>>> mert
-$end 'CacheDataVersion'
-$begin 'VariableValues'
-$end 'VariableValues'

@@ -78,10 +78,8 @@ module create_closed_fractal
             write(file, "oEditor.Move Array(\"NAME:Selections\", \"Selections:=\", \"$(LineName)\", \"NewPartsModelFlag:=\",  _\n")
             write(file, "\"Model\"), Array(\"NAME:TranslateParameters\", \"TranslateVectorX:=\", \"0mm\", \"TranslateVectorY:=\",  _\n")
             write(file, "\"((sqrt(3) * $(Length))/3) mm\", \"TranslateVectorZ:=\", \"0mm\")\n")
-
-        elseif Geometry == "rectangle"
         
-        else println("Geometry Options:\n-square\n-triangle\n-rectangle");     
+        else println("Geometry Options:\n-square\n-triangle");     
         end
         if PEC == "yes"
             write(file, "Set oModule = oDesign.GetModule(\"BoundarySetup\")\n")

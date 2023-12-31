@@ -1,7 +1,76 @@
 SimValueCacheVersionID=1
 $begin 'SimValueInfos'
-	NextUniqueID=0
+	NextUniqueID=2
 	MoveBackwards=false
+	$begin 'SimValue'
+		ID=0
+		$begin 'SimValueParams'
+			QuantityName='S(1,1)'
+			ValueState(90, 15, 1, 2)
+			MatrixSize(0, 0)
+		$end 'SimValueParams'
+	$end 'SimValue'
+	$begin 'SimValue'
+		ID=1
+		$begin 'SimValueParams'
+			QuantityName='GainTotal'
+			ValueState(90, 15, 0, 1)
+			MatrixSize(0, 0)
+		$end 'SimValueParams'
+	$end 'SimValue'
 $end 'SimValueInfos'
 $begin 'SimValueCache'
+	$begin 'DesignMap'
+		DesignID=0
+		$begin 'SolutionMap'
+			$begin 'ContextMap'
+				SolutionID=59
+			$end 'ContextMap'
+			$begin 'ContextMap'
+				SolutionID=60
+			$end 'ContextMap'
+			$begin 'ContextMap'
+				SolutionID=64
+				$begin 'VersionMap'
+					$begin 'ReportTypeSolnDef'
+						ReportType=0
+						SimValueContext(3, 0, 2, 0, false, false, -1, 1, 0, 1, 1, '', 0, 0)
+					$end 'ReportTypeSolnDef'
+					$begin 'MajorVVMap'
+						VersionID=654
+						$begin 'MinorVVMap'
+							MajorVariation='portlen=\'0.25mm\' radbox=\'30mm\' radius=\'0.01mm\''
+							MinorCacheFile='min16ED6824170370579538.tmp'
+						$end 'MinorVVMap'
+					$end 'MajorVVMap'
+				$end 'VersionMap'
+			$end 'ContextMap'
+			$begin 'ContextMap'
+				SolutionID=534
+			$end 'ContextMap'
+			$begin 'ContextMap'
+				SolutionID=535
+			$end 'ContextMap'
+			$begin 'ContextMap'
+				SolutionID=536
+				$begin 'VersionMap'
+					$begin 'ReportTypeSolnDef'
+						ReportType=3
+						SimValueContext(0, 0, 2, 0, false, false, 1, 1, 0, 1, 1, '', 0, 0)
+					$end 'ReportTypeSolnDef'
+					$begin 'MajorVVMap'
+						VersionID=748
+						$begin 'MinorVVMap'
+							MajorVariation='Freq=\'1.8684000000000001GHz\' portlen=\'0.25mm\' radbox=\'30mm\' radius=\'0.01mm\''
+							MinorCacheFile='min318D6824170370788250.tmp'
+						$end 'MinorVVMap'
+						$begin 'MinorVVMap'
+							MajorVariation='Freq=\'5.3155999999999999GHz\' portlen=\'0.25mm\' radbox=\'30mm\' radius=\'0.01mm\''
+							MinorCacheFile='min318D6824170370788251.tmp'
+						$end 'MinorVVMap'
+					$end 'MajorVVMap'
+				$end 'VersionMap'
+			$end 'ContextMap'
+		$end 'SolutionMap'
+	$end 'DesignMap'
 $end 'SimValueCache'

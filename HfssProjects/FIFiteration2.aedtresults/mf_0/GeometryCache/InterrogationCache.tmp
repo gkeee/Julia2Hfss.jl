@@ -9,6 +9,30 @@ $begin 'InterrogationCache'
 		Status=false
 	$end 'ValidationStatus'
 	$begin 'BodyCaches'
+		$begin '6'
+			$begin 'BoundingBox'
+				Low[3: -0.00099999999999822453, -11.492745872936503, -0.001]
+				High[3: 20.000982006431077, 11.492745872936503, 0.001]
+				Exact=true
+				Valid=true
+			$end 'BoundingBox'
+		$end '6'
+		$begin '4151'
+			$begin 'BoundingBox'
+				Low[3: -0.251, -0.001, 0]
+				High[3: -0.0010000000000000026, 0.001, 0]
+				Exact=true
+				Valid=true
+			$end 'BoundingBox'
+		$end '4151'
+		$begin '4163'
+			$begin 'BoundingBox'
+				Low[3: -0.25100000000000122, -30, -30]
+				High[3: 29.749000000000002, 30, 30]
+				Exact=true
+				Valid=true
+			$end 'BoundingBox'
+		$end '4163'
 	$end 'BodyCaches'
 	$begin 'IntersectionCaches'
 	$end 'IntersectionCaches'

@@ -4,6 +4,26 @@ $begin 'RFSM'
 	$begin 'CustomSurfs'
 	$end 'CustomSurfs'
 	$begin 'SetupSolns'
+		$begin 'SetupSolnEntry'
+			Key(ParentID=1, VersID=0, ParentID=647, VersID=0, Context='[0:0]', DesVarn='portlen=\'0.25mm\' radbox=\'30mm\' radius=\'0.001mm\'', IntrVarn='Freq=\'1.4488000000000001GHz\'')
+			SetupSolnFBOFile='5D3B10680170420299027.tmp'
+		$end 'SetupSolnEntry'
+		$begin 'SetupSolnEntry'
+			Key(ParentID=1, VersID=0, ParentID=647, VersID=0, Context='[0:0]', DesVarn='portlen=\'0.25mm\' radbox=\'30mm\' radius=\'0.001mm\'', IntrVarn='Freq=\'3.9367000000000001GHz\'')
+			SetupSolnFBOFile='5D8610680170420301328.tmp'
+		$end 'SetupSolnEntry'
+		$begin 'SetupSolnEntry'
+			Key(ParentID=1, VersID=0, ParentID=647, VersID=0, Context='[0:0]', DesVarn='portlen=\'0.25mm\' radbox=\'30mm\' radius=\'0.001mm\'', IntrVarn='Freq=\'6.2447999999999997GHz\'')
+			SetupSolnFBOFile='5DA410680170420302229.tmp'
+		$end 'SetupSolnEntry'
+		$begin 'SetupSolnEntry'
+			Key(ParentID=1, VersID=0, ParentID=647, VersID=0, Context='[0:0]', DesVarn='portlen=\'0.25mm\' radbox=\'30mm\' radius=\'0.001mm\'', IntrVarn='Freq=\'8.4030000000000005GHz\'')
+			SetupSolnFBOFile='5DB710680170420302830.tmp'
+		$end 'SetupSolnEntry'
+		$begin 'SetupSolnEntry'
+			Key(ParentID=1, VersID=0, ParentID=647, VersID=0, Context='[0:0]', DesVarn='portlen=\'0.25mm\' radbox=\'30mm\' radius=\'0.001mm\'', IntrVarn='Freq=\'10.411300000000001GHz\'')
+			SetupSolnFBOFile='5DCB10680170420303431.tmp'
+		$end 'SetupSolnEntry'
 	$end 'SetupSolns'
 	$begin 'MonostaticRcsSolns'
 	$end 'MonostaticRcsSolns'

@@ -1,7 +1,20 @@
 SimValueCacheVersionID=1
 $begin 'SimValueInfos'
-	NextUniqueID=0
+	NextUniqueID=1
 	MoveBackwards=false
+	$begin 'SimValue'
+		ID=0
+		$begin 'SimValueParams'
+			QuantityName='S(1,1)'
+			ValueState(90, 15, 1, 2)
+			MatrixSize(0, 0)
+		$end 'SimValueParams'
+	$end 'SimValue'
 $end 'SimValueInfos'
 $begin 'SimValueCache'
+	$begin 'DesignMap'
+		DesignID=0
+		$begin 'SolutionMap'
+		$end 'SolutionMap'
+	$end 'DesignMap'
 $end 'SimValueCache'

@@ -1,5 +1,8 @@
 $begin 'CacheDataVersion'
-	DataVersion=1
+	DataVersion=4
 $end 'CacheDataVersion'
 $begin 'VariableValues'
+	radius='0.001mm'
+	portlen='0.25mm'
+	radbox='30mm'
 $end 'VariableValues'

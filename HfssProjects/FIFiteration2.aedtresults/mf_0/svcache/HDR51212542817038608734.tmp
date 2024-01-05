@@ -1,7 +1,88 @@
 SimValueCacheVersionID=1
 $begin 'SimValueInfos'
-	NextUniqueID=0
+	NextUniqueID=2
 	MoveBackwards=false
+	$begin 'SimValue'
+		ID=0
+		$begin 'SimValueParams'
+			QuantityName='S(1,1)'
+			ValueState(90, 15, 1, 2)
+			MatrixSize(0, 0)
+		$end 'SimValueParams'
+	$end 'SimValue'
+	$begin 'SimValue'
+		ID=1
+		$begin 'SimValueParams'
+			QuantityName='GainTotal'
+			ValueState(90, 15, 0, 1)
+			MatrixSize(0, 0)
+		$end 'SimValueParams'
+	$end 'SimValue'
 $end 'SimValueInfos'
 $begin 'SimValueCache'
+	$begin 'DesignMap'
+		DesignID=0
+		$begin 'SolutionMap'
+			$begin 'ContextMap'
+				SolutionID=27
+			$end 'ContextMap'
+			$begin 'ContextMap'
+				SolutionID=28
+			$end 'ContextMap'
+			$begin 'ContextMap'
+				SolutionID=32
+				$begin 'VersionMap'
+					$begin 'ReportTypeSolnDef'
+						ReportType=0
+						SimValueContext(3, 0, 2, 0, false, false, -1, 1, 0, 1, 1, '', 0, 0)
+					$end 'ReportTypeSolnDef'
+					$begin 'MajorVVMap'
+						VersionID=42
+						$begin 'MinorVVMap'
+							MajorVariation='portlen=\'0.25mm\' radbox=\'30mm\' radius=\'0.001mm\''
+							MinorCacheFile='min2AF12730417041789794.tmp'
+						$end 'MinorVVMap'
+					$end 'MajorVVMap'
+				$end 'VersionMap'
+			$end 'ContextMap'
+			$begin 'ContextMap'
+				SolutionID=645
+			$end 'ContextMap'
+			$begin 'ContextMap'
+				SolutionID=646
+			$end 'ContextMap'
+			$begin 'ContextMap'
+				SolutionID=647
+				$begin 'VersionMap'
+					$begin 'ReportTypeSolnDef'
+						ReportType=3
+						SimValueContext(0, 0, 2, 0, false, false, 1, 1, 0, 1, 1, '', 0, 0)
+					$end 'ReportTypeSolnDef'
+					$begin 'MajorVVMap'
+						VersionID=0
+						$begin 'MinorVVMap'
+							MajorVariation='Freq=\'1.4488000000000001GHz\' portlen=\'0.25mm\' radbox=\'30mm\' radius=\'0.001mm\''
+							MinorCacheFile='min60DE10680170420327534.tmp'
+						$end 'MinorVVMap'
+						$begin 'MinorVVMap'
+							MajorVariation='Freq=\'3.9367000000000001GHz\' portlen=\'0.25mm\' radbox=\'30mm\' radius=\'0.001mm\''
+							MinorCacheFile='min60DE10680170420327535.tmp'
+						$end 'MinorVVMap'
+						$begin 'MinorVVMap'
+							MajorVariation='Freq=\'6.2447999999999997GHz\' portlen=\'0.25mm\' radbox=\'30mm\' radius=\'0.001mm\''
+							MinorCacheFile='min60DE10680170420327536.tmp'
+						$end 'MinorVVMap'
+						$begin 'MinorVVMap'
+							MajorVariation='Freq=\'8.4030000000000005GHz\' portlen=\'0.25mm\' radbox=\'30mm\' radius=\'0.001mm\''
+							MinorCacheFile='min60DE10680170420327537.tmp'
+						$end 'MinorVVMap'
+						$begin 'MinorVVMap'
+							MajorVariation='Freq=\'10.411300000000001GHz\' portlen=\'0.25mm\' radbox=\'30mm\' radius=\'0.001mm\''
+							MinorCacheFile='min60DE10680170420327538.tmp'
+						$end 'MinorVVMap'
+					$end 'MajorVVMap'
+				$end 'VersionMap'
+			$end 'ContextMap'
+		$end 'SolutionMap'
+	$end 'DesignMap'
 $end 'SimValueCache'

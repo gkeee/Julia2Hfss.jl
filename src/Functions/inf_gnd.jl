@@ -1,7 +1,7 @@
 module inf_gnd 
     export InfGnd
     using LaTeXStrings  
-    function InfGnd(ProjectName::String, VBSfilePath::String, XSize, YSize, Transparency::Float64, XPosition::Float64, YPosition::Float64,CoaxRadius::Float64)
+    function InfGnd(ProjectName::String, VBSfilePath::String, XSize::Float64, YSize::Float64, Transparency::Float64, XPosition::Float64, YPosition::Float64, CoaxRadius::Float64)
         file = open("$(VBSfilePath)\\inf_gnd.vbs", "w")
         write(file, "Dim oAnsoftApp\n")
         write(file, "Dim oDesktop\n")

@@ -19,7 +19,7 @@ module inf_gnd
         write(file, "\"Model\"), Array(\"NAME:Parameters\", Array(\"NAME:BodyFromFaceToParameters\", \"FacesToDetach:=\", Array(  _\n")
         write(file, "41))), Array(\"CreateGroupsForNewObjects:=\", false) \n") 
         write(file, "oEditor.ChangeProperty Array(\"NAME:AllTabs\", Array(\"NAME:Geometry3DAttributeTab\", Array(\"NAME:PropServers\",  _\n")
-        write(file, "\"$(ProjectName)_ObjectFromFace1\"), Array(\"NAME:ChangedProps\", Array(\"NAME:Name\", \"Value:=\",  _\n")
+        write(file, "\"$(SubstrateName)_ObjectFromFace1\"), Array(\"NAME:ChangedProps\", Array(\"NAME:Name\", \"Value:=\",  _\n")
         write(file, "\"Inf_GND\"))))\n")
         write(file, "oEditor.ChangeProperty Array(\"NAME:AllTabs\", Array(\"NAME:Geometry3DAttributeTab\", Array(\"NAME:PropServers\",  _\n")
         write(file, "\"Inf_GND\"), Array(\"NAME:ChangedProps\", Array(\"NAME:Transparent\", \"Value:=\", $(Transparency))))))\n")

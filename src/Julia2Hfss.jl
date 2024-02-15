@@ -34,6 +34,9 @@ module Julia2Hfss
     using .create_box
 
     include("Functions/Minkowski_Fractal.jl")
-    using .Minkowski_Fractal    
+    using .Minkowski_Fractal
+    
+    include("Functions/inf_gnd.jl")
+    using .inf_gnd
 
 end

@@ -39,4 +39,7 @@ module Julia2Hfss
     include("Functions/inf_gnd.jl")
     using .inf_gnd
 
+    include("Functions/CoaxProbe.jl")
+    using .CoaxProbe
+
 end

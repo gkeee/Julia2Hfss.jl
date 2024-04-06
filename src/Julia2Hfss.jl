@@ -42,4 +42,7 @@ module Julia2Hfss
     include("Functions/CoaxProbe.jl")
     using .CoaxProbe
 
+    include("Functions/scale_object.jl")
+    using .scale_object
+
 end

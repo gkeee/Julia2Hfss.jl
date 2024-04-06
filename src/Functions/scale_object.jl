@@ -17,5 +17,6 @@ module scale_object
         write(file, "Set oEditor = oDesign.SetActiveEditor(\"3D Modeler\")\n")
         write(file, "oEditor.Scale Array(\"NAME:Selections\", \"Selections:=\", \"$(ScaledObject)\", \"NewPartsModelFlag:=\",  _\n")
         write(file, "\"Model\"), Array(\"NAME:ScaleParameters\", \"ScaleX:=\", \"$(SFx)\", \"ScaleY:=\", \"$(SFy)\", \"ScaleZ:=\", \"$(SFz)\")\n")
+        close(file)
     end
 end

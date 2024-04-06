@@ -2,7 +2,7 @@ module scale_object
     export scale
     using LaTeXStrings
     function scale(ProjectName::String, VBSfilePath::String, ScaledObject::String, SFx::Float64, SFy::Float64, SFz::Float64)
-        file = open("$(VBSfilePath)\\scale_FIF.vbs", "w")
+        file = open("$(VBSfilePath)\\scale_object.vbs", "w")
         write(file, "Dim oAnsoftApp\n")
         write(file, "Dim oDesktop\n")
         write(file, "Dim oProject\n")
